@@ -3,6 +3,8 @@ import ProductTable from "@/components/products/ProductsTable";
 import Heading from "@/components/ui/Heading";
 import { prisma } from "@/src/lib/prisma";
 
+export const dynamic = 'force-dynamic';
+
 async function searchProducts(searchTerm: string) {
     const products = await prisma.product.findMany({
         where: {

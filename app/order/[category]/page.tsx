@@ -2,6 +2,8 @@ import ProductCard from "@/components/products/ProductCard"
 import Heading from "@/components/ui/Heading"
 import { prisma } from "@/src/lib/prisma"
 
+export const dynamic = 'force-dynamic';
+
 async function getProducts(category: string) {
   const products = await prisma.product.findMany({
     where: {

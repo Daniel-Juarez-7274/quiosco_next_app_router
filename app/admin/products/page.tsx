@@ -6,6 +6,8 @@ import { prisma } from "@/src/lib/prisma";
 import Link from "next/link";
 import ProductSearchForm from "@/components/products/ProductSearchForm";
 
+export const dynamic = 'force-dynamic';
+
 async function productCount() {
   return await prisma.product.count()
 }
